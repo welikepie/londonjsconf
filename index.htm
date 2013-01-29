@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html><!--#blurb, #mailSubscribe, #speakerSubmit-->
 	<head>
 		<title>Slideshow Test</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link rel="stylesheet" href="styles.css" type="text/css">
-		<script src="script/formverify.js"></script>
+
 	</head>
 	<body>
-
 		<ul class="slideshow">
-
 			<li class="slide active" id="slide-1">
+				<a name="blurb"></a>
 				<div class="content">
 					<h1>JavaScript <em>in</em> The City</h1>
 					<h2>Join us on the 17th on July in London, top speakers from the world of JavaScript dev for a unique two days. London JS Conf will feature two days of workshops, talks &amp; movies. </h2>
-
 				</div>
 			</li>
 
 			<li class="slide static-background" id="slide-2">
+				<a name="mailSubscribe"></a>
 				<div class="content">
 					<h2>Another Slide</h2>
 					<p>
@@ -43,11 +42,14 @@
 			</li>
 
 			<li class="slide" id="slide-3">
+				<a name="speakerSubmit"></a>
 				<div class="content">
 					<h1>Submit a talk</h1>
 					<!--<h1>That's all, folks!</h1>
 					<p>
-						The goddesses? Alex, the goddesses .... Let me just say this about the goddesses: I don't believe the term is good enough ... is good enough ... but when you're bound by these terrestrial descriptions, you must use the best choice available, right?
+						The goddesses? Alex, the goddesses .... Let me just say this about the goddesses: 
+						I don't believe the term is good enough ... is good enough ... but when you're bound 
+						by these terrestrial descriptions, you must use the best choice available, right?
 					</p>-->
 					<div id="speakerform">
 						<p>
@@ -380,7 +382,7 @@
 
 		</footer>
 
-		<button type="button" id="prev-button">
+		<button type="button" id="prev-button" class="hidden">
 			&laquo;
 		</button>
 		<button type="button" id="next-button">
@@ -389,29 +391,9 @@
 
 	</body>
 	<script type="text/javascript" src="zepto.min.js"></script>
-	<script type="text/javascript">
-		( function() {"use strict";
-
-				var active = $('.slideshow .slide.active');
-
-				$('#prev-button').on('click', function() {
-					var prev = active.prev();
-					if (prev.length) {
-						active.removeClass('active');
-						prev.addClass('active');
-						active = prev;
-					}
-				});
-				$('#next-button').on('click', function() {
-					var next = active.next();
-					if (next.length) {
-						active.removeClass('active');
-						next.addClass('active');
-						active = next;
-					}
-				});
-
-			}());
-
-	</script>
+	<script type="text/javascript" src="script/hammer.js"></script>
+	<script type="text/javascript" src = "script/buttons.js"></script>
+	<script type="text/javascript" src="script/formverify.js"></script>
+	<script type="text/javascript" src="script/history.js"></script>
+	<script type="text/javascript" src="script/swipe.js"></script>
 </html>
