@@ -4,24 +4,19 @@
 		<title>Slideshow Test</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link rel="stylesheet" href="styles.css" type="text/css">
+		<script src="script/formverify.js"></script>
 	</head>
 	<body>
 		
 		<ul class="slideshow">
-			
+
 			<li class="slide active" id="slide-1">
 				<div class="content">
 					<h1>JavaScript <em>in</em> The City</h1>
 					<h2>Join us on the 17th on July in London, top speakers from the world of JavaScript dev for a unique two days. London JS Conf will feature two days of workshops, talks &amp; movies.
 					</h2>
 
-					<div class="form-box">
-						<h2>Keep me posted</h2>
-						<form>
-							<input type="email" placeholder="name@domain.com" >
-							<input type="submit">
-						</form>
-					</div>
+					
 				</div>
 			</li>
 			
@@ -29,6 +24,16 @@
 				<div class="content">
 					<h2>Another Slide</h2>
 					<p>This one used CSS property <code>background-attachment: fixed</code> to have non-moving background.</p>
+					<div class="form-box">
+						<h2>Keep me posted</h2>
+						<form target="hiddenbox" action="http://welikepie.us2.list-manage1.com/subscribe/post?u=b76886bab37470b1e293804f6&id=4360022455" method="POST" name="signup" onsubmit="if (formsubmit() == false) {return false;}">
+							<input type="text" name="MERGE0" id="MERGE0" placeholder="name@domain.com" >
+							<div id="error"></div>
+							<div id="success"></div>
+							<input type="submit" name="submit" value="Submit">
+						</form>
+						<iframe name="hiddenbox" class="hidden"></iframe>
+					</div>
 				</div>
 				<div>
 
