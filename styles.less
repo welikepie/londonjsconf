@@ -62,9 +62,7 @@ height:0px;
 		transition: transform @slide-duration @slide-easing 0;
 		
 		.content {
-		
-
-		
+		  
 		}
 		
 		&.active {
@@ -213,13 +211,20 @@ header {
 	padding: 240px 10px 10px 10px;
 	margin: 0 auto;
 	text-shadow: #999999 1px 1px 0px;
-
 	* {
 		margin: 0;
 		padding: 0;
 		width: 400px;
 	}
-
+        #speakerform {
+            position:fixed;
+            overflow-y:scroll;
+            width:768px;
+            height:300px;
+            *{
+                width:100%;         
+                }
+            }
 	h1 {
 		.big-text;
 		margin: 0;
