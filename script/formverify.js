@@ -100,5 +100,14 @@ if (( x == null || x == "" ) && ( y == null || y == ""))
 	  return false;
 
 	  }
+
+
+	setTimeout(function() {
+	//console.log("testing");
+	document.getElementById("speakerform").id="speakerFormSubmitted";
+document.getElementById("speakerFormSubmitted").innerHTML = "<p> We've received your suggestion for a speaker and it looks good.</p>"+
+"<p>Thank you for submitting your speaker; we'll get in touch with them soon!</p>";
+}, 100);
+
 return true;
 }
