@@ -1,7 +1,8 @@
 ( function() {"use strict";
 		var hashThing = document.URL.substr(document.URL.indexOf('#'), document.URL.length);
 		//#blurb, #mailSubscribe, #speakerSubmit
-		var hashes = ["#blurb", "#mailSubscribe", "#speakerSubmit"];
+		var hashes = ["", "#mailSubscribe", "#speakerSubmit"];
+		//var hashes = ["","","#speakerSubmit"]; //multiple blank hashlinks breaks history in this caes.
 		var increment = 0;
 		var active = $('.slideshow .slide.active');
 		var totalSlides = $('.slide');
@@ -42,11 +43,11 @@
 		});
 
 		window.addEventListener('popstate', function(event) {
-			//			console.log('popstate fired!');
-			//console.log(event.state);
+			//			//console.log('popstate fired!');
+			////console.log(event.state);
 
 			if (event.state != null) {
-				console.log(event.state.hash);
+				//console.log(event.state.hash);
 				changeScreen(event.state.hash);
 			}
 
@@ -63,14 +64,14 @@
 					index = i;
 				}
 			}
-
-			//console.log(index+","+increment);
+			
+			////console.log(index+","+increment);
 			//"next-button" , "prev-button"
 			if (index > increment) {
-				console.log("index");
+				//console.log("index");
 				var nums = index - increment;
 				for (var i = 0; i < nums; i++) {
-					console.log("clicking next");
+					//console.log("clicking next");
 					var next = active.next();
 					if (next.length) {
 						//increment++;
@@ -89,10 +90,10 @@
 				}
 				increment = index;
 			} else if (increment > index) {
-				console.log("increment");
+				//console.log("increment");
 				var nums = increment - index;
 				for (var i = 0; i < nums; i++) {
-					console.log("clicking prev");
+					//console.log("clicking prev");
 					var prev = active.prev();
 					if (prev.length) {
 						//increment--;
@@ -110,7 +111,6 @@
 				}
 				increment = index;
 			}
-
 		}
 
 		function nextOne() {
@@ -128,7 +128,6 @@
 					document.getElementById("next-button").className = "hidden";
 				}
 			}
-
 		}
 
 		function backOne() {
@@ -145,23 +144,30 @@
 				if (active[0] != totalSlides[totalSlides.length - 1]) {
 					document.getElementById("next-button").className = "";
 				}
-
 			}
 		}
 
 		function historySwapper(num) {
-			console.log(num);
-			console.log(hashes[num]);
+			//console.log(num);
+			//console.log(hashes[num]);
 			//var hashlink = '"'+hashes[num].toString()+'"';
 			var stateObj = {
 				hash : hashes[num]
 			};
+			if(hashes[num]!=""){
 			history.pushState(stateObj, "", hashes[num]);
+			}
+			else if(hashes[num] == "" && document.URL.indexOf('#')!= -1){
+			history.pushState(stateObj, "", document.URL.substr(0,document.URL.indexOf('#')));
+			}
+			else if(hashes[num] == "" && document.URL.indexOf('#')==-1){
+			history.pushState(stateObj, "", document.URL.substr(0,document.URL));
+			}
 		}
 
-		if (hashThing.indexOf("#") == -1) {
+		if (hashThing.indexOf("#") == -1 || increment == 0) {
 			history.pushState({
-				hash : "#blurb"
+				hash : ""
 			}, "", hashes[0]);
 		}
 
