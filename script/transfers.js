@@ -14,10 +14,25 @@
 			}, "", hashThing);
 		}//sort it defaulting to #blurb
 
+			
+		for (var i = 0; i < document.getElementsByClassName("slide").length; i++) {
+			document.getElementsByClassName("content")[i].addEventListener('onswipe', function(event) {
+				console.log("olololSwipe");
+				//hammer.cancelEvent();
+			}, false);
+			document.getElementsByClassName("content")[i].addEventListener('touchend', function(event) {
+				event.stopPropagation();
+			}, false);
+			document.getElementsByClassName("content")[i].addEventListener('mouseup', function(event) {
+				event.stopPropagation();
+			}, false);
+		}
+
 		hammer.onswipe = function(ev) {
 			var direction = ev.direction;
 			var active = $('.slideshow .slide.active');
 			var totalSlides = $('.slide');
+			
 			if (direction == "right") {//left moving
 				backOne();
 			}
@@ -64,7 +79,7 @@
 					index = i;
 				}
 			}
-			
+
 			////console.log(index+","+increment);
 			//"next-button" , "prev-button"
 			if (index > increment) {
@@ -154,14 +169,12 @@
 			var stateObj = {
 				hash : hashes[num]
 			};
-			if(hashes[num]!=""){
-			history.pushState(stateObj, "", hashes[num]);
-			}
-			else if(hashes[num] == "" && document.URL.indexOf('#')!= -1){
-			history.pushState(stateObj, "", document.URL.substr(0,document.URL.indexOf('#')));
-			}
-			else if(hashes[num] == "" && document.URL.indexOf('#')==-1){
-			history.pushState(stateObj, "", document.URL.substr(0,document.URL));
+			if (hashes[num] != "") {
+				history.pushState(stateObj, "", hashes[num]);
+			} else if (hashes[num] == "" && document.URL.indexOf('#') != -1) {
+				history.pushState(stateObj, "", document.URL.substr(0, document.URL.indexOf('#')));
+			} else if (hashes[num] == "" && document.URL.indexOf('#') == -1) {
+				history.pushState(stateObj, "", document.URL.substr(0, document.URL));
 			}
 		}
 
