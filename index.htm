@@ -1,395 +1,57 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Slideshow Test</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<link rel="stylesheet" href="styles.css" type="text/css">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>London JS Conf</title>
+    <meta name="description" content="">
+    <meta name="author" content="Luke">
 
-	</head>
-	<body>
-		<ul class="slideshow">
-			<li class="slide active" id="slide-1">
-				<div class="content">
-					<h1>JavaScript <em>in</em> The City</h1>
-					<h2>Join us on the 17th on July in London, top speakers from the world of JavaScript dev for a unique two days. London JS Conf will feature two days of workshops, talks &amp; movies. </h2>
-				</div>
-			</li>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http:/html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-			<li class="slide static-background" id="slide-2">
-				<div class="content">
-					<h2>Another Slide</h2>
-					<p>
-						This one used CSS property <code>
-							background-attachment: fixed</code>
-						to have non-moving background.
-					</p>
-					<div class="form-box">
-						<h2>Keep me posted</h2>
-						<form target="hiddenbox" action="http://welikepie.us2.list-manage1.com/subscribe/post?u=b76886bab37470b1e293804f6&id=4360022455" method="POST" name="signup" onsubmit="if (formsubmit() == false) {return false;}">
-							<input type="text" name="MERGE0" id="MERGE0" placeholder="name@domain.com" >
-							<div id="error"></div>
-							<div id="success"></div>
-							<input type="submit" name="submit" value="Submit">
-						</form>
-						<iframe name="hiddenbox" class="hidden"></iframe>
-					</div>
-				</div>
-				<div>
+    <!-- Le styles -->    
+     <link href='http://fonts.googleapis.com/css?family=Droid+Sans|PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+    <link href="css/fullmetal.css" rel="stylesheet">
+	
 
-				</div>
-			</li>
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    
+    <!-- Le viewports -->
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-			<li class="slide" id="slide-3">
-				<div class="content">
-					<h1>Submit a talk</h1>
-					<!--<h1>That's all, folks!</h1>
-					<p>
-						The goddesses? Alex, the goddesses .... Let me just say this about the goddesses: 
-						I don't believe the term is good enough ... is good enough ... but when you're bound 
-						by these terrestrial descriptions, you must use the best choice available, right?
-					</p>-->
-					<div id="speakerform">
-						<p>
-							Fields denoted with a * are required
-						</p>
-						<div id="speaker_submission">
-							<div class="ss-form">
-								<script type="text/javascript">
-									var submitted = false;
-								</script>
-								<!-- -->
-								<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
-								<!--onload="
-								if(submitted)
-								{
-								window.location='/subConfirm';
-								}
-								"-->>
+    <!-- Le scripts -->
 
-								</iframe>
-								<form action="https://docs.google.com/a/welikepie.com/spreadsheet/formResponse?formkey=dE5YMmVGU2JoMWF4MWZwVGdjdUxCS0E6MA&ifq" target="hidden_iframe" id="ss-form" name = "speakerform" method="post"
-								target="_blank" onsubmit="if(speakerFormSubmit()==true){submitted=true;}">
-									
-										<script type="text/javascript"></script>
-										<div class="errorbox-good">
-											<div class="ss-item ss-item-required ss-text">
-												<div class="ss-form-entry">
-													<label class="ss-q-title" for="entry_0">What is the speakers name? *</label>
-													<input type="text" name="entry.0.single" value="" class="ss-q-short" id="entry_0">
-													<div id = "speaker"></div>
-												</div>
-											</div>
-										</div>
-										<div class="errorbox-good">
-											<div class="ss-item ss-item-required ss-text">
-												<div class="ss-form-entry">
-													<label class="ss-q-title" for="entry_1">How can we contact them? <span class="ss-required-asterisk">*</span></label>
-													<label class="ss-q-help" for="entry_1">Email, Twitter or IM, however we can get in touch!</label>
-													<input type="text" name="entry.1.single" value="" class="ss-q-short" id="entry_1">
-													<div id = "contactSpeaker"></div>
-												</div>
-											</div>
-										</div>
-										<div class="errorbox-good">
-											<div class="ss-item  ss-select">
-												<div class="ss-form-entry">
-													<label class="ss-q-title" for="entry_2">How do you know the speaker? </label>
-													<label class="ss-q-help" for="entry_2"></label>
-													<select name="entry.2.single" id="entry_2" class="ss-q-short">
-														<option value=""></option>
-														<option value="I saw them speak at an event.">I saw them speak at an event.</option>
-														<option value="They are a friend/colleague.">They are a friend/colleague.</option>
-														<option value="It&#39;s me, the speaker!">It&#39;s me, the speaker!</option>
-													</select>
-												</div>
-											</div>
-										</div>
+  </head>
 
-										<div class="errorbox-good">
-											<div class="ss-item  ss-text">
-												<div class="ss-form-entry">
-													<label class="ss-q-title" for="entry_3">Why should they speak for us? </label>
-													<label class="ss-q-help" for="entry_3">What could they bring to the table? Tell us why they are awesome!</label>
-													<textarea name="entry.3.single" value="" class="ss-q-short" id="entry_3" autocomplete="off"></textarea>
-												</div>
-											</div>
-										</div>
-										<div class="errorbox-good">
-											<div class="ss-item  ss-text">
-												<div class="ss-form-entry">
-													<label class="ss-q-title" for="entry_4">What would you like them to talk about? </label>
-													<label class="ss-q-help" for="entry_4"></label>
-													<textarea name="entry.4.single" value="" class="ss-q-short" id="entry_4" autocomplete="off"></textarea>
-												</div>
-											</div>
-										</div>
-										<div class="errorbox-good">
-											<div class="ss-item  ss-select">
-												<div class="ss-form-entry">
-													<label class="ss-q-title" for="entry_5">What should the style of their talk be? </label>
-													<label class="ss-q-help" for="entry_5"></label>
-													<select name="entry.5.single" id="entry_5" class="ss-q-short">
-														<option value = ""></option>
-														<option value="Talk">Talk</option>
-														<option value="Lightning Talk">Lightning Talk</option>
-														<option value="Panel Discussion">Panel Discussion</option>
-														<option value="Tech Demo">Tech Demo</option>
-														<option value="Workshop">Workshop</option>
-													</select>
-												</div>
-											</div>
-										</div>
-										<div class="errorbox-good">
-											<div class="ss-item  ss-select">
-												<div class="ss-form-entry">
-													<label class="ss-q-title" for="entry_6">Preferred Length of Talk? </label>
-													<label class="ss-q-help" for="entry_6"></label>
-													<select name="entry.6.single" id="entry_6" class="ss-q-short">
-														<option value=""></option>
-														<option value="5-10 Minutes">5-10 Minutes</option>
-														<option value="10-20 Minutes">10-20 Minutes</option>
-														<option value="20-30 Minutes">20-30 Minutes</option>
-														<option value="30-45 Minutes">30-45 Minutes</option>
-														<option value="1 Hour+">1 Hour+</option>
-														<option value="Full Day Workshop">Full Day Workshop</option>
-													</select>
-												</div>
-											</div>
-										</div>
-										<div class="errorbox-good">
-											<div class="ss-item  ss-text">
-												<div class="ss-form-entry">
-													<label class="ss-q-title" for="entry_8">Links to things they have done. </label>
-													<label class="ss-q-help" for="entry_8">Projects, Apps, Websites, Talks, anything!</label>
-													<input type="text" name="entry.8.single" value="" class="ss-q-short" id="entry_8">
-												</div>
-											</div>
-										</div>
-										<div class="errorbox-good">
-											<div class="ss-item  ss-text">
-												<div class="ss-form-entry">
-													<label class="ss-q-title" for="entry_9">Their GitHub / Portfolio / Blog </label>
-													<label class="ss-q-help" for="entry_9"></label>
-													<input type="text" name="entry.9.single" value="" class="ss-q-short" id="entry_9">
-												</div>
-											</div>
-										</div>
-										<div class="errorbox-good">
-											<div class="ss-item  ss-text">
-												<div class="ss-form-entry">
-													<label class="ss-q-title" for="entry_10">Link to their Lanyrd account. </label>
-													<input type="text" name="entry.10.single" value="" class="ss-q-short" id="entry_10">
-												</div>
-											</div>
-										</div>
-										<div class="errorbox-good-list">
-											<div class="ss-item  ss-checkbox">
-												<label for="entry_7">What do you want them to talk about?</label>
-												<div class="categories">
-													<ul>
-														<li class = "ss-choice-item">
-															<input type="checkbox" name="entry.7.group" value="Zombies" class="ss-q-checkbox" id="group_7_1">
-															<label class="ss-choice-label" for="group_7_1">Zombies</label>
-														</li>
-														<li class="ss-choice-item">
+  <body>
+    <!--
+        Why hello there, LondonJS Conf future attendee (we hope). We're really looking forward to making LondonJS Conf as awesome as possible, and as you can understand, this site is a very basic holding page to let people know it's happening. If you've got any ideas on what you'd like to see to make the conference as awesome as possible, then let @arranrp, @lurkmoophy or @Charlotteis know on Twitter and we can hopefully meet your standards. Keep checking back to the site in coming months to see what we've got in store...
+    -->
+    <header>
+        <div id="logo"></div>
+        <h3>Event Handler's</h3>
+        <h1><span>LondonJS</span> <span>Conf 2014</span></h1>
+    </header>
+    <main>
+        <div id="details">
+            <p id="when"><sub>Coming</sub> February 13th, 2014</p>
+            <p id="where"><sub>at</sub> <a href="http://www.princecharlescinema.com/" title="Prince Charles Cinema, London">Prince Charles Cinema</a>, London</p>
+            <p id="launching"><sub>Launching</sub> Autumn 2013</p></br>
+            <p id="newsletter"><sub>Sign up to our mailing list with your</sub> <input type="email" id="newsletter" placeholder="Email Address"></p>
+            <p id="speaking"><sub>Interested in</sub> <a href="mailto:speak@eventhandler.com" title="Email Event Handler" subject="Interested in speaking at LondonJS Conf">Speaking? <sub>Submit your talk here</a></sub></p>
+            <p id="sponsors"><sub>Want to help us make LondonJS amazing? Why not</sub> <a href="mailto:sponsor@eventhandler.com" subject="How do I sponsor LondonJS Conf?">Sponsor</a> <sub>the conference?</sub></p>
+        </div>
+        <div id="signup">
 
-															<input type="checkbox" name="entry.7.group" value="Writing" class="ss-q-checkbox" id="group_7_2">
-															<label class="ss-choice-label" for"group_7_2">Writing</label>
-														</li>
-														<li class="ss-choice-item">
+        </div>
+    </main>
 
-															<input type="checkbox" name="entry.7.group" value="Design" class="ss-q-checkbox" id="group_7_3">
-															<label class="ss-choice-label" for "group_7_3">Design</label>
-														</li>
-														<li class="ss-choice-item">
-
-															<input type="checkbox" name="entry.7.group" value="Javascript" class="ss-q-checkbox" id="group_7_4">
-															<label class="ss-choice-label" for "group_7_4">Javascript</label>
-														</li>
-														<li class="ss-choice-item">
-
-															<input type="checkbox" name="entry.7.group" value="LEGO" class="ss-q-checkbox" id="group_7_5">
-															<label class="ss-choice-label" for "group_7_5">LEGO</label>
-														</li>
-														<li class="ss-choice-item">
-
-															<input type="checkbox" name="entry.7.group" value="Illustration" class="ss-q-checkbox" id="group_7_6">
-															<label class="ss-choice-label" for "group_7_6">Illustration</label>
-														</li>
-														<li class="ss-choice-item">
-
-															<input type="checkbox" name="entry.7.group" value="Web Design" class="ss-q-checkbox" id="group_7_7">
-															<label class="ss-choice-label" for "group_7_7">Web Design</label>
-														</li>
-														<li class="ss-choice-item">
-
-															<input type="checkbox" name="entry.7.group" value="Development" class="ss-q-checkbox" id="group_7_8">
-															<label class="ss-choice-label" for "group_7_8">Development</label>
-														</li>
-														<li class="ss-choice-item">
-
-															<input type="checkbox" name="entry.7.group" value="Libraries" class="ss-q-checkbox" id="group_7_9">
-															<label class="ss-choice-label" for "group_7_9">Libraries</label>
-														</li>
-														<li class="ss-choice-item">
-
-															<input type="checkbox" name="entry.7.group" value="APIs" class="ss-q-checkbox" id="group_7_10">
-															<label class="ss-choice-label" for "group_7_10">APIs</label>
-														</li>
-														<li class="ss-choice-item">
-
-															<input type="checkbox" name="entry.7.group" value="Arduino" class="ss-q-checkbox" id="group_7_11">
-															<label class="ss-choice-label" for "group_7_11">Arduino</label>
-														</li>
-														<li class="ss-choice-item">
-
-															<input type="checkbox" name="entry.7.group" value="Mobile" class="ss-q-checkbox" id="group_7_12">
-															<label class="ss-choice-label" for "group_7_12">Mobile</label>
-														</li>
-														<li class="ss-choice-item">
-
-															<input type="checkbox" name="entry.7.group" value="Internet of things" class="ss-q-checkbox" id="group_7_13">
-															<label class="ss-choice-label" for "group_7_13">Internet of things</label>
-														</li>
-														<li class="ss-choice-item">
-
-															<input type="checkbox" name="entry.7.group" value="Gaming" class="ss-q-checkbox" id="group_7_14">
-															<label class="ss-choice-label" for "group_7_14">Gaming</label>
-														</li>
-														<li class="ss-choice-item">
-
-															<input type="checkbox" name="entry.7.group" value="Scaling" class="ss-q-checkbox" id="group_7_15">
-															<label class="ss-choice-label" for "group_7_15">Scaling</label>
-														</li>
-														<li class="ss-choice-item">
-
-															<input type="checkbox" name="entry.7.group" value="Architecture" class="ss-q-checkbox" id="group_7_16">
-															<label class="ss-choice-label" for "group_7_16">Architecture</label>
-														</li>
-														<li class="ss-choice-item">
-
-															<input type="checkbox" name="entry.7.group" value="Optimisation" class="ss-q-checkbox" id="group_7_17">
-															<label class="ss-choice-label" for "group_7_17">Optimisation</label>
-														</li>
-														<li class="ss-choice-item">
-
-															<input type="checkbox" name="entry.7.group" value="Browsers" class="ss-q-checkbox" id="group_7_18">
-															<label class="ss-choice-label" for "group_7_18">Browsers</label>
-														</li>
-														<li class="ss-choice-item">
-
-															<input type="checkbox" name="entry.7.group" value="Frameworks" class="ss-q-checkbox" id="group_7_19">
-															<label class="ss-choice-label" for "group_7_19">Frameworks</label>
-														</li>
-														<li class="ss-choice-item">
-
-															<input type="checkbox" name="entry.7.group" value="Serverside" class="ss-q-checkbox" id="group_7_20">
-															<label class="ss-choice-label" for "group_7_20">Serverside</label>
-														</li>
-														<li class="ss-choice-item">
-
-															<input type="checkbox" name="entry.7.group" value="Clientside" class="ss-q-checkbox" id="group_7_21">
-															<label class="ss-choice-label" for "group_7_21">Clientside</label>
-														</li>
-														<li class="ss-choice-item">
-
-															<input type="checkbox" name="entry.7.group" value="TV" class="ss-q-checkbox" id="group_7_22">
-															<label class="ss-choice-label" for "group_7_22">TV</label>
-														</li>
-														<li class="ss-choice-item">
-
-															<input type="checkbox" name="entry.7.group" value="Patterns" class="ss-q-checkbox" id="group_7_23">
-															<label class="ss-choice-label" for "group_7_23">Patterns</label>
-														</li>
-														<li class="ss-choice-item">
-
-															<input type="checkbox" name="entry.7.group" value="Real time web" class="ss-q-checkbox" id="group_7_24">
-															<label class="ss-choice-label" for "group_7_24">Real time web</label>
-														</li>
-														<li class="ss-choice-item">
-
-															<input type="checkbox" name="entry.7.group" value="Data" class="ss-q-checkbox" id="group_7_25">
-															<label class="ss-choice-label" for "group_7_25">Data</label>
-														</li>
-														<li class="ss-choice-item">
-
-															<input type="checkbox" name="entry.7.group" value="Security" class="ss-q-checkbox" id="group_7_26">
-															<label class="ss-choice-label" for "group_7_26">Security</label>
-														</li>
-														<li class="ss-choice-item">
-
-															<input type="checkbox" name="entry.7.group" value="Testing" class="ss-q-checkbox" id="group_7_27">
-															<label class="ss-choice-label" for "group_7_27">Testing</label>
-														</li>
-														<li class="ss-choice-item">
-															<label class="ss-choice-label">
-																<input type="checkbox" name="entry.7.group" value="Electronics" class="ss-q-checkbox" id="group_7_28">
-																Electronics</label>
-														</li>
-														<li class="ss-choice-item">
-
-															<input type="checkbox" name="entry.7.group" value="Hacking" class="ss-q-checkbox" id="group_7_29">
-															<label class="ss-choice-label" for "group_7_29">Hacking</label>
-														</li>
-														<li class="ss-choice-item">
-
-															<input type="checkbox" name="entry.7.group" value="Storytelling" class="ss-q-checkbox" id="group_7_30">
-															<label class="ss-choice-label" for "group_7_30">Storytelling</label>
-														</li>
-														<li class="ss-choice-item">
-
-															<input type="checkbox" name="entry.7.group" value="Hardware" class="ss-q-checkbox" id="group_7_31">
-															<label class="ss-choice-label"for "group_7_31">Hardware</label>
-														</li>
-														<!-- li, first input, label, second.
-														//li, input -->
-														<li class="ss-choice-item wider">
-															<input type="checkbox" name="entry.7.group" value="__option__" class="ss-q-checkbox" id="other_option:7">
-															<label for="other_option:7"> Other: </label>
-															<input type="text" name="entry.7.group.other_option_" value="" class="ss-q-other" id="other_option:7">
-														</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-								
-									<div id = "submitWarning"></div>
-									<div class="ss-form-entry">
-										<input type="hidden" name="pageNumber" value="0">
-										<input type="hidden" name="backupCache" value="">
-										<input type="submit" name="submit" value="Submit" class="button">
-									</div>
-								</form>
-
-							</div>
-						</div>
-			</li>
-
-		</ul>
-
-		<header>
-			<div class="header_wrapper">
-				<h1>London JS Conf</h1>
-				<div class="tri_top"></div>
-				<div class="tri_bottom"></div>
-			</div>
-		</header>
-
-		<footer>
-
-		</footer>
-
-		<button type="button" id="prev-button" class="hidden">
-			&laquo;
-		</button>
-		<button type="button" id="next-button">
-			&raquo;
-		</button>
-
-	</body>
-	<script type="text/javascript" src="script/zepto.min.js"></script>
-	<script type="text/javascript" src="script/hammer.js"></script>
-	<script type="text/javascript" src = "script/transfers.js"></script>
-	<script type="text/javascript" src="script/formverify.js"></script>
-	<script type="text/javascript" src="script/history.js"></script>
+  </body>
 </html>

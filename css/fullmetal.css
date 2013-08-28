@@ -1,0 +1,175 @@
+/* ----------------------------
+WARNING: Here be messy, messy css. The perils of getting a holding page up as quickly as possible...
+---------------------------- */
+
+/* ----------------------------
+simple reset
+---------------------------- */
+
+html,body,ul,ol,li,form,fieldset,legend{margin:0;padding:0}h1,h2,h3,h4,h5,h6,p{margin-top:0}fieldset,img{border:0}legend{color:#000}li{list-style:none}sup{vertical-align:text-top}sub{vertical-align:text-bottom}table{border-collapse:collapse;border-spacing:0}caption,th,td{text-align:left;vertical-align:top;font-weight:400}input,textarea,select{font-size:110%;line-height:1.1}abbr,acronym{border-bottom:.1em dotted;cursor:help}
+
+/* Full metal */
+
+@font-face {
+    font-family: 'Antilles';
+    src: url('type/antilles-webfont.eot');
+    src: url('type/antilles-webfont.eot?#iefix') format('embedded-opentype'),
+         url('type/antilles-webfont.woff') format('woff'),
+         url('type/antilles-webfont.ttf') format('truetype'),
+         url('type/antilles-webfont.svg#anitllesregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+ 
+}
+
+html { height: 100%; }
+
+body {
+	font-family: Helvetica, Arial, Sans-serif;
+	font-size: 16px;
+	color: #333;
+	color: rgba( 0,0,0,0.8 );
+	background: #f5eeee;
+	padding: 30px 0;
+}
+
+p {
+	line-height: 130%;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	transition: 0.1s ease-in;
+}
+
+	a:hover {
+		opacity: 0.7;
+	}
+
+input {
+	-webkit-appearance: none;
+    border-radius: 0;
+}
+
+header {
+	width: 90%;
+	margin: 0 auto 5% auto;
+}
+
+#logo {
+	display: block;
+	margin: 0 auto 20px auto;
+	background: url('../img/borntocode_sm.jpg') no-repeat;
+	background-size: cover;
+	width: 100%;
+	max-width: 290px;
+	height: 209px;
+}
+
+header h3 {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 0;
+}
+
+header h1 {
+	width: 100%;
+	text-align: center;
+	font-family: 'Antilles', sans-serif;
+	text-transform: uppercase;
+	font-size: 3em;
+	letter-spacing: -1px;
+}
+
+	header h1 span {
+		display: block;
+		margin-bottom: -10px;
+	}
+
+	@media screen and (min-width: 720px) {
+		#logo {
+			background: url('../img/borntocode_md.jpg') no-repeat;
+			background-size: cover;
+			max-width: 500px;
+			height: 360px;
+		}
+
+		header h1 {
+			font-size: 4em;
+		}
+
+		header h3 {
+			margin-top: 30px;
+		}
+	}
+
+	@media screen and (min-width: 1210px) {
+		#logo {
+			background: url('../img/borntocode_lg.jpg') no-repeat;
+			background-size: cover;
+			max-width: 600px;
+			height: 424px;
+		}
+		header h1 {
+			font-size: 5em;
+		}
+		header h3 {
+			margin-top: 50px;
+			font-size: 1.5em;
+		}
+	}
+
+#details {
+	text-align: center;
+	width: 80%;
+	margin: 0 auto;
+}
+
+#details sub {
+	vertical-align: inherit;
+	font-size: 0.6em;
+}
+
+#details p {
+	text-transform: uppercase;
+	font-family: 'PT Sans Narrow';
+	display: inline;
+	font-size: 1em;
+	color: #666;
+}
+
+p#sponsors {
+	display: block;
+}
+
+	input#newsletter {
+		background: none;
+		border: none;
+		border-bottom: 1px solid #999;
+		text-transform: uppercase;
+		font-family: 'PT Sans Narrow';
+		display: inline;
+		font-size: 1em;
+		color: #999;
+	}
+
+	@media screen and (min-width: 1220px) {
+
+		#details p {
+			font-size: 1.2em;
+		}
+
+	}
+
+	@media screen and (max-width: 420px) {
+		#details {
+			margin-top: 70px;
+		}
+	}
+
+	@media screen and (max-width: 800px) {
+		#details {
+			margin-top: 90px;
+		}
+	}
