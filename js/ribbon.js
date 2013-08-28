@@ -14,12 +14,13 @@
 		TAG_HEIGHT = 30,
 		TAG_WIDTH = 200,
 		MAX_STRAIN = 40,
-		OPEN_LENGTH = 200 ,
+		OPEN_LENGTH = 200,  //make this undefined for full length page drop
 		// Factor of page height that needs to be dragged for the
 		// curtain to fall
 		DRAG_THRESHOLD = 0.1;
 		VENDORS = [ 'Webkit', 'Moz', 'O', 'ms' ];
 		snapRight = 0;
+		ribbonDisabled = true;
 		
 	var dom = {
 			ribbon: null,
@@ -50,7 +51,6 @@
 
 
 		velocity = 0,
-		//rotation = -45,
 		rotation = 45,
 
 		curtainTargetY = 0,
@@ -93,22 +93,23 @@
 						dom.ribbonString = dom.ribbon.querySelector( '.string' );
 			dom.ribbonTag = dom.ribbon.querySelector( '.tag' );
 			if(snapRight == 0){dom.ribbonTag.style.marginTop = "10px";}
-			dom.ribbonTagText = dom.ribbonTag.querySelector('.textBit');
-			// Bind events
-			dom.ribbon.addEventListener( 'click', onRibbonClick, false );
-			document.addEventListener( 'mousemove', onMouseMove, false );
-			document.addEventListener( 'mousedown', onMouseDown, false );
-			document.addEventListener( 'mouseup', onMouseUp, false );
-			document.addEventListener( 'touchstart', onTouchStart, false);
-			document.addEventListener( 'touchmove', onTouchMove, false);
-			document.addEventListener( 'touchend', onTouchEnd, false);
-			window.addEventListener( 'resize', layout, false );
-
-			if( dom.closeButton ) {
-				console.log("closer Found");
-				dom.closeButton.addEventListener( 'click', onCloseClick, false );
+			if(ribbonDisabled == false){
+				dom.ribbonTagText = dom.ribbonTag.querySelector('.textBit');
+				// Bind events
+				dom.ribbon.addEventListener( 'click', onRibbonClick, false );
+				document.addEventListener( 'mousemove', onMouseMove, false );
+				document.addEventListener( 'mousedown', onMouseDown, false );
+				document.addEventListener( 'mouseup', onMouseUp, false );
+				document.addEventListener( 'touchstart', onTouchStart, false);
+				document.addEventListener( 'touchmove', onTouchMove, false);
+				document.addEventListener( 'touchend', onTouchEnd, false);
+				window.addEventListener( 'resize', layout, false );
+	
+				if( dom.closeButton ) {
+					//console.log("closer Found");
+					dom.closeButton.addEventListener( 'click', onCloseClick, false );
+				}
 			}
-
 			// Start the animation loop
 			animate();
 
@@ -162,7 +163,7 @@
 	}
 
 	function onRibbonClick( event ) {
-		console.log(event);
+		//console.log(event);
 		if( dom.curtain ) {
 			event.preventDefault();
 
@@ -176,7 +177,7 @@
 	}
 
 	function onCloseClick( event ) {
-		console.log(event);
+		//console.log(event);
 		event.preventDefault();
 		close();
 	}
@@ -206,12 +207,17 @@
 
 	function animate() {
 		update();
+		if(OPEN_LENGTH != undefined && curtainCurrentY >= OPEN_LENGTH){
+			//console.log("OPENLENGTHLIMIT");
+			curtainCurrentY = OPEN_LENGTH;
+		}
 		render();
 		
 		requestAnimFrame( animate );
 	}
 
 	function update() {
+		
 		// Distance between mouse and top right corner
 		if(snapRight == 1){
 			var leftOrRight = window.innerWidth;		
@@ -223,10 +229,18 @@
 
 		// If we're OPENED the curtainTargetY should ease towards page bottom
 		if( state === STATE_OPENED ) {
-			if(curtainTargetY < OPEN_LENGTH || OPEN_LENGTH == undefined){
+				////console.log(curtainTargetY);
+				//console.log(OPEN_LENGTH == undefined);
+			if(OPEN_LENGTH == undefined){
+				//console.log("open undefined");
+			curtainTargetY = Math.min( curtainTargetY + ( window.innerHeight - curtainTargetY ) * 0.2, window.innerHeight );
+			}
+			else if (OPEN_LENGTH != undefined && curtainTargetY < OPEN_LENGTH){
+				//console.log("open defined");
 			curtainTargetY = Math.min( curtainTargetY + ( window.innerHeight - curtainTargetY ) * 0.2, OPEN_LENGTH );
 			}
-			if(curtainTargetY >= OPEN_LENGTH){
+			
+			else if(curtainTargetY >= OPEN_LENGTH){
 			dom.ribbonTagText.innerHTML = openedText;
 			}
 		}
@@ -389,3 +403,4 @@
 	initialize();
 
 })();
+
