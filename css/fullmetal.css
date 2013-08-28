@@ -143,7 +143,12 @@ p#sponsors {
 	display: block;
 }
 
-	input#newsletter {
+
+#mc_embed_signup {
+	display: inline-block;
+}
+
+	input#mce-EMAIL {
 		background: none;
 		border: none;
 		border-bottom: 1px solid #999;
@@ -152,6 +157,10 @@ p#sponsors {
 		display: inline;
 		font-size: 1em;
 		color: #999;
+	}
+
+	input[type=submit] {
+		display: none;
 	}
 
 	@media screen and (min-width: 1220px) {
