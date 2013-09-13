@@ -1,0 +1,130 @@
+body {
+	padding: 0;
+	padding-bottom: 5px;
+}
+
+header {
+	background: url('../img/marqueetop.png');
+	height: 225px;
+	width: 97%;
+	background-repeat: repeat-x;
+	padding: 0;
+	margin: 10px auto 0 auto;
+	box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+	border: solid #333 5px;
+
+}
+
+header h1 {
+	display: block;
+	text-indent: -10000px;
+	overflow: hidden;
+	height: 225px;
+	width: 1000px;
+	margin: 0 auto;
+	background: url('../img/sphead_lg.png');
+}
+
+	@media screen and (max-width: 1000px) {
+		header h1 { 
+			width: 700px;
+			background: url('../img/sphead_md.png');
+		}
+	}
+
+	@media screen and (max-width: 720px) {
+		header h1 { 
+			width: 320px;
+			background: url('../img/sphead_sm.png');
+			margin-left: 10px;
+		}
+	}
+
+main {
+	margin: 2em 0;
+}
+
+p, h2, blockquote {
+	width: 90%;
+	max-width: 600px;
+	margin: 0 auto 1em auto;	
+}
+
+a {
+	color: #A61D21;
+	border-bottom: dotted 1px #A61D21;
+}
+
+#sponsorpack p {
+	line-height: 150%;
+	font-size: 1.1em;
+}
+
+blockquote {
+	padding-left: 50px;
+	font-style: italic;
+}
+
+#packages {
+	width: 90%;
+	margin: 50px auto;
+	text-align: center;
+
+}
+
+.package {
+	width: 18%;
+	margin: 0 2% 20px 0;
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+	background: #fff;
+	padding: 20px;
+	border-radius: 15px;
+}
+
+	.package:last-of-type {
+		margin-right: 0;
+	}
+
+	.package h3 {
+		text-align: center;
+		margin-bottom: 0;
+	}
+
+	.package h4 {
+		font-size: 1em;
+		font-style: italic;
+		text-align: center;
+		color: #666;
+	}
+
+	.package ul li {
+		margin-bottom: 0.5em;
+		list-style-type: square;
+		margin-left: 20px;
+		font-size: 0.9em;
+	}
+
+	@media screen and (max-width: 860px) {
+		.package {
+			width: 40%;
+			padding: 20px;
+		}
+		.package:nth-child(even) {
+			margin-right: 0;
+		}
+	}
+
+	@media screen and (max-width: 860px) {
+		.package {
+			width: 90%;
+			margin-right: 0;
+		}
+	}
+
+	#details {
+		margin-top: 30px;
+	}
