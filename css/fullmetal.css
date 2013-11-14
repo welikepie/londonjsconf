@@ -30,8 +30,55 @@ body {
 	color: #333;
 	color: rgba( 0,0,0,0.8 );
 	background: #f5eeee;
-	padding: 30px 0;
+	padding: 30px 0 0 0;
 }
+
+section {
+	width: 100%;
+	padding-bottom: 50px;
+}
+
+/* Top Section Content */
+.londonjscontent {
+	width: 960px;
+	margin: 0 auto;
+}
+
+/* Speakers Section Background */
+.speakers {
+	background: url('../img/sectionbackgrounds/speakers.jpg');
+	margin: 0 auto;
+}
+
+/* Speakers Section Content */
+
+.speakercontent {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.speaker {
+	background: white;
+	width: 20%;
+	display: inline-block;
+	margin-left: 3%;
+	margin-top: 50px;
+	padding: 10px 10px 0 10px;
+}
+
+.speaker:first-child {
+	margin-left: 0;
+}
+
+.speakername {
+	margin-top: 10px;
+}
+
+.speakername a {
+	color: #F00000;
+}
+
+
 
 p {
 	line-height: 130%;
