@@ -35,7 +35,6 @@ body {
 
 section {
 	width: 100%;
-	padding-bottom: 50px;
 }
 
 
@@ -43,19 +42,25 @@ section {
 .londonjscontent {
 	width: 85%;
 	margin: 0 auto;
+	padding-bottom: 50px;
 }
 
 /* Speakers Section Background */
 .speakers {
 	background: url('../img/sectionbackgrounds/speakers.jpg');
 	margin: 0 auto;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /* Speakers Section Content */
 
 .speakercontent {
-	width: 85%;
+	width: 90%;
 	margin: 0 auto;
+	padding-bottom: 50px;
 }
 
 .speaker {
@@ -64,20 +69,25 @@ section {
 	display: inline-block;
 	margin-top: 50px;
 	padding: 8px 8px 0 8px;
-	margin-left: 2%;
+	margin-left: 2.3%;
 }
 
 
 .speaker img {
 	width: 100%;
-	filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
-	filter: gray; /* IE5+ */
-	-webkit-filter: grayscale(1); /* Webkit Nightlies & Google Chrome Canary */
+	-webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: grayscale(0.5);
+  filter: gray; /* IE 6-9 */
 }
 
 .speaker img:hover {
 	filter: none;
-	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
 }
 
 .speakername {
@@ -85,7 +95,7 @@ section {
 }
 
 .speakername a {
-	color: #F00000;
+	color: #a71d22;
 }
 
 .tba {
@@ -97,7 +107,173 @@ section {
 	margin-left: 2%;
 }
 
+/* Special Features Section Background */
 
+.specialfeatures {
+	background: url('../img/sectionbackgrounds/features.jpg');
+	margin: 0 auto;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* Special Features Section Content */
+
+.features {
+	width: 90%;
+	margin: 0 auto;
+	padding-bottom: 50px;
+}
+
+.features h1 {
+	color: white;
+	margin-left: 5%;
+	padding-top: 50px;
+}
+
+.features p {
+	margin-left: 5%;
+	color: white;
+}
+.feature {
+	width: 25%;
+	display: inline-block;
+	margin-top: 50px;
+	padding: 8px 8px 0 8px;
+	margin-left: 5%;
+}
+
+.feature h2 {
+	color: white;
+}
+
+.feature img {
+	border: 5px solid white;
+	width: 100%;
+	-webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: grayscale(0.5);
+  filter: gray; /* IE 6-9 */
+}
+
+.feature img:hover {
+	filter: none;
+	filter: grayscale(0);
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+}
+
+.feature p {
+	color: white;
+}
+
+.button {
+	background-color: #1ccba4;
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* Supporting Cast Section Background */
+
+.supportingcast {
+	background-color: #f5eeee;
+	margin: 0 auto;
+}
+
+/* Supporting Cast Section Content */
+
+.supporting {
+	width: 90%;
+	margin: 0 auto;
+	padding-bottom: 50px;
+}
+
+.supporting h1 {
+	color: #333;
+	margin-left: 5%;
+	padding-top: 50px;
+}
+
+.supporting p {
+	margin-left: 5%;
+	color: #333;
+}
+
+.goldsponsors {
+	display: inline-block;
+	margin-left: 5%;
+}
+
+.goldsponsors img {
+	border: 5px solid #333;
+	width: 280px;
+	-webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: grayscale(0.5);
+  filter: gray; /* IE 6-9 */
+}
+
+.goldsponsors img:hover {
+	filter: none;
+	filter: grayscale(0);
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+}
+
+/* Section Content for Map */
+
+.map {
+	padding-bottom: none;
+}
+
+/* Section Background for Locations */
+
+.locationsection {
+	background: url('../img/sectionbackgrounds/features.jpg');
+	margin: 0 auto;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* Section Content for Locations */
+
+.locations {
+	width: 90%;
+	margin: 0 auto;
+	padding-bottom: 50px;
+}
+
+.locations h1 {
+	color: white;
+	margin-left: 5%;
+	padding-top: 50px;
+}
+
+.locations p {
+	margin-left: 5%;
+	color: white;
+}
+
+.locationlist {
+	display: inline-block;
+	margin-left: 5%;
+}
+
+.locationlist h3 {
+	color: white;
+}
+
+.locationlist ul {
+
+}
 
 p {
 	line-height: 130%;
