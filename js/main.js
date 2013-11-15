@@ -1,21 +1,21 @@
 $(window).load(function() {
-	$('.featuredropcoffee, .featuredropghost, .featuredroptour').addClass('hidden');
+	$('.featuredropcopter, .featuredropghost, .featuredropphoto').addClass('hidden');
 
-	$( ".coffee" ).click(function() {
-  $(".featuredropcoffee").toggleClass( "hidden" );
+	$( ".copter" ).click(function() {
+  $(".featuredropcopter").toggleClass( "hidden" );
   $(".featuredropghost").addClass( "hidden" );
-  $(".featuredroptour").addClass( "hidden" );
+  $(".featuredropphoto").addClass( "hidden" );
   });
 
   $( ".ghost" ).click(function() {
   $(".featuredropghost").toggleClass( "hidden" );
-  $(".featuredropcoffee").addClass( "hidden" );
-  $(".featuredroptour").addClass( "hidden" );
+  $(".featuredropcopter").addClass( "hidden" );
+  $(".featuredropphoto").addClass( "hidden" );
   });
 
-  $( ".tour" ).click(function() {
-  $(".featuredroptour").toggleClass( "hidden" );
-  $(".featuredropcoffee").addClass( "hidden" );
+  $( ".photo" ).click(function() {
+  $(".featuredropphoto").toggleClass( "hidden" );
+  $(".featuredropcopter").addClass( "hidden" );
   $(".featuredropghost").addClass( "hidden" );
   });
 

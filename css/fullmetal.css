@@ -45,6 +45,20 @@ section {
 	padding-bottom: 50px;
 }
 
+.ticketbutton {
+	color: #F3EEEE;
+	background-color: #a71d22;
+	width: 50%;
+	margin: 0 auto;
+	display: block;
+	padding: 10px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 1.5em;
+}
+
 /* Speakers Section Background */
 .speakers {
 	background: url('../img/sectionbackgrounds/speakers.jpg');
@@ -101,10 +115,11 @@ section {
 .tba {
 	background-color: white;
 	margin-top: 25px;
-	padding: 10px;
+	padding: 8px 8px 8px 8px;
 	display: inline-block;
 	width: 20%;
-	margin-left: 2%;
+	margin-left: 2.3%;
+	text-align: center;
 }
 
 /* About Section Background */
@@ -124,11 +139,13 @@ section {
 	margin: 0 auto;
 	padding-bottom: 50px;
 	padding-top: 50px;
+	margin-left: 2.3%;
 }
 
 .aboutcontent h1 {
 	color: white;
 	margin-left: 5%;
+	font-size: 2em;
 }
 
 .aboutcontent p {
@@ -139,6 +156,7 @@ section {
 .tickets {
 	margin-left: 5%;
 }
+
 
 /* Special Features Section Background */
 
@@ -162,6 +180,7 @@ section {
 .features h1 {
 	color: white;
 	margin-left: 5%;
+	font-size: 2em;
 	padding-top: 50px;
 }
 
@@ -214,7 +233,7 @@ section {
 	display: none;
 }
 
-.featuredropcoffee, .featuredropghost, .featuredroptour {
+.featuredropcopter, .featuredropghost, .featuredropphoto {
 	width: 90%;
 	margin-left: 5%;
 	margin-top: 50px;
@@ -454,6 +473,7 @@ header h1 {
 
 p#sponsors {
 	display: block;
+	margin-bottom: 50px;
 }
 
 
