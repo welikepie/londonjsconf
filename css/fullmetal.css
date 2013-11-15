@@ -175,6 +175,7 @@ section {
 	width: 90%;
 	margin: 0 auto;
 	padding-bottom: 50px;
+	margin-left: 2.3%;
 }
 
 .features h1 {
@@ -220,6 +221,7 @@ section {
 
 .feature p {
 	color: white;
+	margin-left: 0;
 }
 
 .button {
@@ -227,17 +229,77 @@ section {
 	display: block;
 	width: 100%;
 	margin: 0 auto;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 10px 5px 10px 5px;
+	text-align: center;
+	color: #ffeeee;
+	font-size: 1.2em;
 }
 
 .hidden {
 	display: none;
 }
 
-.featuredropcopter, .featuredropghost, .featuredropphoto {
+.featuredropcopter {
 	width: 90%;
 	margin-left: 5%;
 	margin-top: 50px;
 	background-color: #1ccba4;
+	padding: 20px 0 20px 20px;
+	margin-left: 5%;
+}
+
+.featuredropghost {
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 50px;
+	background-color: #1ccba4;
+	padding: 20px 0 20px 20px;
+	margin-left: 5%;
+}
+
+.featuredropphoto {
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 50px;
+	background-color: #1ccba4;
+	padding: 20px 0 20px 20px;
+	margin-left: 5%;
+}
+
+.featuredropcopter h2 {
+	color: white;
+	font-size: 1.5em;
+}
+
+.featuredropghost h2 {
+	color: white;
+	font-size: 1.5em;
+}
+
+.featuredropphoto h2 {
+	color: white;
+	font-size: 1.5em;
+}
+
+.featuredropcopter p {
+	color: #333;
+	font-size: 1em;
+	margin-left: 0;
+}
+
+.featuredropghost p {
+	color: #333;
+	font-size: 1em;
+	margin-left: 0;
+}
+
+.featuredropphoto p {
+	color: #333;
+	font-size: 1em;
+	margin-left: 0;
 }
 
 /* Supporting Cast Section Background */
@@ -253,6 +315,7 @@ section {
 	width: 90%;
 	margin: 0 auto;
 	padding-bottom: 50px;
+	margin-left: 2.3%;
 }
 
 .supporting h1 {
