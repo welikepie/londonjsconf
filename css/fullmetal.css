@@ -38,9 +38,10 @@ section {
 	padding-bottom: 50px;
 }
 
+
 /* Top Section Content */
 .londonjscontent {
-	width: 960px;
+	width: 85%;
 	margin: 0 auto;
 }
 
@@ -53,7 +54,7 @@ section {
 /* Speakers Section Content */
 
 .speakercontent {
-	width: 960px;
+	width: 85%;
 	margin: 0 auto;
 }
 
@@ -61,13 +62,22 @@ section {
 	background: white;
 	width: 20%;
 	display: inline-block;
-	margin-left: 3%;
 	margin-top: 50px;
-	padding: 10px 10px 0 10px;
+	padding: 8px 8px 0 8px;
+	margin-left: 2%;
 }
 
-.speaker:first-child {
-	margin-left: 0;
+
+.speaker img {
+	width: 100%;
+	filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
+	filter: gray; /* IE5+ */
+	-webkit-filter: grayscale(1); /* Webkit Nightlies & Google Chrome Canary */
+}
+
+.speaker img:hover {
+	filter: none;
+	-webkit-filter: grayscale(0);
 }
 
 .speakername {
@@ -76,6 +86,15 @@ section {
 
 .speakername a {
 	color: #F00000;
+}
+
+.tba {
+	background-color: white;
+	margin-top: 25px;
+	padding: 10px;
+	display: inline-block;
+	width: 20%;
+	margin-left: 2%;
 }
 
 
@@ -141,6 +160,23 @@ header h1 {
 		margin-bottom: -10px;
 	}
 
+	@media screen and (max-width: 480px) {
+		.speaker {
+			background: white;
+			width: 70%;
+			display: inline-block;
+			margin-top: 50px;
+			padding: 10px 10px 0 10px;
+			margin-left: 15%;
+		}
+
+		.tba {
+			margin-left: 15%;
+			width: 70%;
+		}
+	}
+
+
 	@media screen and (min-width: 720px) {
 		#logo {
 			background: url('../img/borntocode_md.jpg') no-repeat;
@@ -156,6 +192,9 @@ header h1 {
 		header h3 {
 			margin-top: 30px;
 		}
+
+
+
 	}
 
 	@media screen and (min-width: 1210px) {
