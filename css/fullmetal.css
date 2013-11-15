@@ -107,6 +107,39 @@ section {
 	margin-left: 2%;
 }
 
+/* About Section Background */
+.aboutsection {
+	background: url('../img/sectionbackgrounds/about.jpg');
+	margin: 0 auto;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* About Section Content */
+
+.aboutcontent {
+	width: 90%;
+	margin: 0 auto;
+	padding-bottom: 50px;
+	padding-top: 50px;
+}
+
+.aboutcontent h1 {
+	color: white;
+	margin-left: 5%;
+}
+
+.aboutcontent p {
+	color: white;
+	margin-left: 5%;
+}
+
+.tickets {
+	margin-left: 5%;
+}
+
 /* Special Features Section Background */
 
 .specialfeatures {
@@ -175,6 +208,17 @@ section {
 	display: block;
 	width: 100%;
 	margin: 0 auto;
+}
+
+.hidden {
+	display: none;
+}
+
+.featuredropcoffee, .featuredropghost, .featuredroptour {
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 50px;
+	background-color: #1ccba4;
 }
 
 /* Supporting Cast Section Background */
