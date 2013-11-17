@@ -239,23 +239,26 @@ section {
 
 .featuredropcopter {
 	width: 90%;
+	margin: 0 auto;
 	margin-top: 50px;
 	background-color: #1ccba4;
-	padding: 20px 0 20px 20px;
+	padding: 20px 20px 20px 20px;
 }
 
 .featuredropghost {
 	width: 90%;
+	margin: 0 auto;
 	margin-top: 50px;
 	background-color: #1ccba4;
-	padding: 20px 0 20px 20px;
+	padding: 20px 20px 20px 20px;
 }
 
 .featuredropphoto {
 	width: 90%;
+	margin: 0 auto;
 	margin-top: 50px;
 	background-color: #1ccba4;
-	padding: 20px 0 20px 20px;
+	padding: 20px 20px 20px 20px;
 }
 
 .featuredropcopter h2 {
@@ -280,21 +283,18 @@ section {
 	color: #333;
 	font-size: 1em;
 		text-align: left;
-		margin-left: 0;
 }
 
 .featuredropghost p {
 	color: #333;
 	font-size: 1em;
 		text-align: left;
-		margin-left: 0;
 }
 
 .featuredropphoto p {
 	color: #333;
 	font-size: 1em;
 		text-align: left;
-		margin-left: 0;
 }
 
 /* Supporting Cast Section Background */
@@ -350,6 +350,15 @@ section {
 
 .map {
 	padding-bottom: none;
+}
+
+.map div {
+	height: auto;
+	position: absoute;
+}
+
+.map iframe {
+	padding: 0;
 }
 
 /* Section Background for Locations */
@@ -483,8 +492,7 @@ header h1 {
 		.speaker {
 			background: white;
 			width: 70%;
-			display: block;
-			padding: 10px 10px 0 10px;
+			display: inline-block;
 			margin: 20px auto;
 		}
 
