@@ -31,6 +31,7 @@ body {
 	color: rgba( 0,0,0,0.8 );
 	background: #f5eeee;
 	padding: 30px 0 0 0;
+	text-align: center;
 }
 
 section {
@@ -83,7 +84,6 @@ section {
 	display: inline-block;
 	margin-top: 50px;
 	padding: 8px 8px 0 8px;
-	margin-left: 2.3%;
 }
 
 
@@ -105,7 +105,7 @@ section {
 }
 
 .speakername {
-	margin-top: 10px;
+	padding: 10px 0;
 }
 
 .speakername a {
@@ -116,10 +116,8 @@ section {
 	background-color: white;
 	margin-top: 25px;
 	padding: 8px 8px 8px 8px;
-	display: inline-block;
+	display: block;
 	width: 20%;
-	margin-left: 2.3%;
-	text-align: center;
 }
 
 /* About Section Background */
@@ -139,22 +137,20 @@ section {
 	margin: 0 auto;
 	padding-bottom: 50px;
 	padding-top: 50px;
-	margin-left: 2.3%;
 }
 
 .aboutcontent h1 {
 	color: white;
-	margin-left: 5%;
 	font-size: 2em;
+	text-align: left;
 }
 
 .aboutcontent p {
 	color: white;
-	margin-left: 5%;
+	text-align: left;
 }
 
 .tickets {
-	margin-left: 5%;
 }
 
 
@@ -175,30 +171,29 @@ section {
 	width: 90%;
 	margin: 0 auto;
 	padding-bottom: 50px;
-	margin-left: 2.3%;
 }
 
 .features h1 {
 	color: white;
-	margin-left: 5%;
 	font-size: 2em;
 	padding-top: 50px;
+	text-align: left;
 }
 
 .features p {
-	margin-left: 5%;
 	color: white;
+	text-align: left;
 }
 .feature {
 	width: 25%;
 	display: inline-block;
 	margin-top: 50px;
 	padding: 8px 8px 0 8px;
-	margin-left: 5%;
 }
 
 .feature h2 {
 	color: white;
+	text-align: left;
 }
 
 .feature img {
@@ -221,7 +216,7 @@ section {
 
 .feature p {
 	color: white;
-	margin-left: 0;
+	text-align: left;
 }
 
 .button {
@@ -244,62 +239,62 @@ section {
 
 .featuredropcopter {
 	width: 90%;
-	margin-left: 5%;
 	margin-top: 50px;
 	background-color: #1ccba4;
 	padding: 20px 0 20px 20px;
-	margin-left: 5%;
 }
 
 .featuredropghost {
 	width: 90%;
-	margin-left: 5%;
 	margin-top: 50px;
 	background-color: #1ccba4;
 	padding: 20px 0 20px 20px;
-	margin-left: 5%;
 }
 
 .featuredropphoto {
 	width: 90%;
-	margin-left: 5%;
 	margin-top: 50px;
 	background-color: #1ccba4;
 	padding: 20px 0 20px 20px;
-	margin-left: 5%;
 }
 
 .featuredropcopter h2 {
 	color: white;
 	font-size: 1.5em;
+		text-align: left;
 }
 
 .featuredropghost h2 {
 	color: white;
 	font-size: 1.5em;
+		text-align: left;
 }
 
 .featuredropphoto h2 {
 	color: white;
 	font-size: 1.5em;
+		text-align: left;
 }
 
 .featuredropcopter p {
 	color: #333;
 	font-size: 1em;
-	margin-left: 0;
+		text-align: left;
+		margin-left: 0;
 }
 
 .featuredropghost p {
 	color: #333;
 	font-size: 1em;
-	margin-left: 0;
+		text-align: left;
+		margin-left: 0;
 }
 
 .featuredropphoto p {
 	color: #333;
 	font-size: 1em;
-	margin-left: 0;
+		text-align: left;
+		margin-left: 0;
 }
 
 /* Supporting Cast Section Background */
@@ -315,23 +310,22 @@ section {
 	width: 90%;
 	margin: 0 auto;
 	padding-bottom: 50px;
-	margin-left: 2.3%;
 }
 
 .supporting h1 {
 	color: #333;
-	margin-left: 5%;
 	padding-top: 50px;
+	font-size: 2em;
+		text-align: left;
 }
 
 .supporting p {
-	margin-left: 5%;
 	color: #333;
 }
 
 .goldsponsors {
 	display: inline-block;
-	margin-left: 5%;
+	margin: 0 auto;
 }
 
 .goldsponsors img {
@@ -379,18 +373,19 @@ section {
 
 .locations h1 {
 	color: white;
-	margin-left: 5%;
 	padding-top: 50px;
+		text-align: left;
 }
 
 .locations p {
-	margin-left: 5%;
 	color: white;
+		text-align: left;
 }
 
 .locationlist {
+	width: 25%;
 	display: inline-block;
-	margin-left: 5%;
+	padding: 8px 8px 0 8px;
 }
 
 .locationlist h3 {
@@ -398,7 +393,29 @@ section {
 }
 
 .locationlist ul {
+	
+}
 
+/* Footer Background */
+
+.footer {
+	margin: 0 auto;
+	background-color: #333;
+}
+
+.footercontent {
+	color: white;
+	font-size: 0.8em;
+	text-align: center;
+	padding: 10px;
+}
+
+.footercontent a {
+	text-decoration: none;
+}
+
+.footercontent a:hover {
+	text-decoration: underline;
 }
 
 p {
@@ -466,14 +483,34 @@ header h1 {
 		.speaker {
 			background: white;
 			width: 70%;
-			display: inline-block;
-			margin-top: 50px;
+			display: block;
 			padding: 10px 10px 0 10px;
-			margin-left: 15%;
+			margin: 20px auto;
+		}
+
+		.goldsponsors {
+			width: 100%;
+			display: block;
+			margin: 15px auto;
+			padding: 10px 10px 0 10px;
+		}
+
+		.locationlist {
+			width: 70%;
+			display: block;
+			margin: 15px auto;
+			padding: 10px 10px 0 10px;
+		}
+
+		.feature {
+			width: 70%;
+			display: block;
+			margin: 15px auto;
+			padding: 10px 10px 0 10px;
 		}
 
 		.tba {
-			margin-left: 15%;
+			margin: 0 auto;
 			width: 70%;
 		}
 	}
