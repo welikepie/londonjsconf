@@ -84,8 +84,9 @@ section {
 	display: inline-block;
 	margin-top: 50px;
 	padding: 8px 8px 0 8px;
+	margin-left: 8px;
+	margin-right: 8px;
 }
-
 
 .speaker img {
 	width: 100%;
@@ -189,6 +190,8 @@ section {
 	display: inline-block;
 	margin-top: 50px;
 	padding: 8px 8px 0 8px;
+	margin-left: 16px;
+	margin-right: 16px;
 }
 
 .feature h2 {
@@ -326,6 +329,8 @@ section {
 .goldsponsors {
 	display: inline-block;
 	margin: 0 auto;
+	margin-left: 16px;
+	margin-right: 16px;
 }
 
 .goldsponsors img {
@@ -494,6 +499,8 @@ header h1 {
 			width: 70%;
 			display: inline-block;
 			margin: 20px auto;
+			margin-left: 0;
+			margin-right: 0;
 		}
 
 		.goldsponsors {
