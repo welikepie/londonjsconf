@@ -68,6 +68,7 @@ section {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-position: 25% 75%;
 }
 
 /* Speakers Section Content */
@@ -129,6 +130,7 @@ section {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-position: 10% 55%;
 }
 
 /* About Section Content */
@@ -369,7 +371,7 @@ section {
 /* Section Background for Locations */
 
 .locationsection {
-	background: url('../img/sectionbackgrounds/features.jpg');
+	background: url('../img/sectionbackgrounds/locations.jpg');
 	margin: 0 auto;
 	-webkit-background-size: cover;
   -moz-background-size: cover;
