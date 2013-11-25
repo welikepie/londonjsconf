@@ -136,6 +136,9 @@ section {
   */
 }
 
+.aboutsection p a {
+	text-decoration: underline;
+}
 /* About Section Content */
 
 .aboutcontent {
@@ -168,6 +171,10 @@ section {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.specialfeatures p a{
+	text-decoration: underline;
 }
 
 /* Special Features Section Content */
@@ -534,6 +541,18 @@ header h1 {
 
 		.ticketwidget {
 			display: none;
+		}
+
+		.featuredropcopter {
+			padding-right: 15px;
+		}
+
+		.featuredropphoto {
+			padding-right: 15px;
+		}
+
+		.featuredropghost {
+			padding-right: 15px;
 		}
 	}
 
