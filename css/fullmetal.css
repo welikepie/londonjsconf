@@ -120,17 +120,20 @@ section {
 	padding: 8px 8px 8px 8px;
 	display: block;
 	width: 20%;
+	margin-left: 50px;
 }
 
 /* About Section Background */
 .aboutsection {
-	background: url('../img/sectionbackgrounds/about.jpg');
+	background-color: #f5eeee;
+	/* background: url('../img/sectionbackgrounds/about.jpg');
 	margin: 0 auto;
 	-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   background-position: 10% 55%;
+  */
 }
 
 /* About Section Content */
@@ -143,17 +146,16 @@ section {
 }
 
 .aboutcontent h1 {
-	color: white;
+	/* color: white; */
+	color: #333;
 	font-size: 2em;
 	text-align: left;
 }
 
 .aboutcontent p {
-	color: white;
+	/* color: white; */
+	color: #333;
 	text-align: left;
-}
-
-.tickets {
 }
 
 
@@ -336,7 +338,7 @@ section {
 }
 
 .goldsponsors img {
-	border: 5px solid #333;
+	border: 5px solid #d5cdcd;
 	width: 280px;
 	-webkit-filter: grayscale(100%);
   filter: grayscale(100%);
@@ -361,7 +363,6 @@ section {
 
 .map div {
 	height: auto;
-	position: absoute;
 }
 
 .map iframe {
