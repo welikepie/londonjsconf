@@ -62,7 +62,7 @@ section {
 
 /* Speakers Section Background */
 .speakers {
-	background: url('../img/sectionbackgrounds/speakers.jpg');
+	background-image: url('../img/sectionbackgrounds/speakers.jpg');
 	margin: 0 auto;
 	-webkit-background-size: cover;
   -moz-background-size: cover;
@@ -165,13 +165,13 @@ section {
 /* Special Features Section Background */
 
 .specialfeatures {
-	background: url('../img/sectionbackgrounds/london2.jpg');
+	background-image: url('../img/sectionbackgrounds/london2.jpg');
 	background-position: 10% 55%;
-	margin: 0 auto;
 	-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+	margin: 0 auto;
   float: left;
   padding-bottom: 50px;
 }
@@ -223,6 +223,7 @@ section {
 	border: 5px solid white;
 	width: 100%;
 	-webkit-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
   filter: grayscale(100%);
   filter: grayscale(0.5);
   filter: gray; /* IE 6-9 */
@@ -391,7 +392,7 @@ section {
 /* Section Background for Locations */
 
 .locationsection {
-	background: url('../img/sectionbackgrounds/locations.jpg');
+	background-image: url('../img/sectionbackgrounds/locations.jpg');
 	margin: 0 auto;
 	-webkit-background-size: cover;
   -moz-background-size: cover;
@@ -435,16 +436,19 @@ section {
 /* Footer Background */
 
 .footer {
-	margin: 0 auto;
-	background-color: #333;
 	float: left;
+	width: 100%;
+	display: block;
 }
 
 .footercontent {
+	background-color: #333;
+	width: 100%;
 	color: white;
 	font-size: 0.8em;
-	text-align: center;
+	margin: 0 auto 0 auto;
 	padding: 10px;
+	float: left;
 }
 
 .footercontent a {
@@ -500,6 +504,7 @@ header h3 {
 	width: 100%;
 	text-align: center;
 	margin-bottom: 0;
+	line-height: 1.5em;
 }
 
 header h1 {
@@ -509,11 +514,11 @@ header h1 {
 	text-transform: uppercase;
 	font-size: 3em;
 	letter-spacing: -1px;
+	line-height: 1.1em;
 }
 
 	header h1 span {
 		display: block;
-		margin-bottom: -10px;
 	}
 
 	@media screen and (max-width: 480px) {
@@ -521,7 +526,6 @@ header h1 {
 			background: white;
 			width: 70%;
 			display: inline-block;
-			margin: 20px auto;
 			margin-left: 0;
 			margin-right: 0;
 		}
