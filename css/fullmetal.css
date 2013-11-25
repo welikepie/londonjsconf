@@ -162,7 +162,7 @@ section {
 /* Special Features Section Background */
 
 .specialfeatures {
-	background: url('../img/sectionbackgrounds/features.jpg');
+	background: url('../img/sectionbackgrounds/london.jpg');
 	margin: 0 auto;
 	-webkit-background-size: cover;
   -moz-background-size: cover;
@@ -531,6 +531,10 @@ header h1 {
 			margin: 0 auto;
 			width: 70%;
 		}
+
+		.ticketwidget {
+			display: none;
+		}
 	}
 
 
@@ -548,6 +552,10 @@ header h1 {
 
 		header h3 {
 			margin-top: 30px;
+		}
+
+		.ticketbuttonevb {
+			display: none;
 		}
 
 
