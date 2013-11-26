@@ -447,8 +447,9 @@ section {
 	color: white;
 	font-size: 0.8em;
 	margin: 0 auto 0 auto;
-	padding: 10px;
 	float: left;
+	padding: 10px 0 10px 0;
+
 }
 
 .footercontent a {
