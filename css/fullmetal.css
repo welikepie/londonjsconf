@@ -329,6 +329,7 @@ section {
 .supportingcast {
 	background-color: #f5eeee;
 	margin: 0 auto;
+	float: left;
 }
 
 /* Supporting Cast Section Content */
@@ -343,11 +344,21 @@ section {
 	color: #333;
 	padding-top: 50px;
 	font-size: 2em;
-		text-align: left;
+	text-align: left;
 }
 
 .supporting p {
 	color: #333;
+}
+
+.supporting a:hover {
+	text-decoration: none;
+	transition-property: none;
+	opacity: 1;
+}
+
+.gldsponsors {
+	padding-bottom: 20px;
 }
 
 .goldsponsors {
@@ -375,6 +386,63 @@ section {
   -o-filter: grayscale(0%);
 }
 
+.silvsponsors {
+	padding-bottom: 20px;
+}
+
+.silversponsors {
+	display: inline-block;
+	margin: 0 auto;
+	margin-left: 16px;
+	margin-right: 16px;
+}
+
+.silversponsors img {
+	border: 5px solid #d5cdcd;
+	width: 190px;
+	-webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: grayscale(0.5);
+  filter: gray; /* IE 6-9 */
+}
+
+.silversponsors img:hover {
+	filter: none;
+	filter: grayscale(0);
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+}
+
+.brosponsors {
+	padding-bottom: 20px;
+}
+
+.bronzesponsors {
+	display: inline-block;
+	margin: 0 auto;
+	margin-left: 16px;
+	margin-right: 16px;
+}
+
+.bronzesponsors img {
+	border: 5px solid #d5cdcd;
+	width: 140px;
+	-webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: grayscale(0.5);
+  filter: gray; /* IE 6-9 */
+}
+
+.bronzesponsors img:hover {
+	filter: none;
+	filter: grayscale(0);
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+}
 /* Section Content for Map */
 
 .map {
