@@ -84,9 +84,10 @@ section {
 	width: 20%;
 	display: inline-block;
 	margin-top: 50px;
-	padding: 8px 8px 0 8px;
+	padding: 8px 8px 8px 8px;
 	margin-left: 8px;
 	margin-right: 8px;
+	vertical-align: top;
 }
 
 .speaker img {
@@ -107,11 +108,17 @@ section {
 }
 
 .speakername {
-	padding: 10px 0;
+	padding: 0;
+	margin: 10px 0;
 }
 
 .speakername a {
 	color: #a71d22;
+}
+
+.talktitle {
+	padding: 0;
+	margin: 10px 0;
 }
 
 .tba {
