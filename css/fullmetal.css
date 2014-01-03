@@ -168,6 +168,15 @@ section {
 	text-align: left;
 }
 
+.competition {
+	margin-top: 15px;
+}
+
+.competition h2 {
+	text-align: left;
+}
+
+
 
 /* Special Features Section Background */
 
@@ -435,7 +444,7 @@ section {
 
 .bronzesponsors img {
 	border: 5px solid #d5cdcd;
-	width: 140px;
+	width: 220px;
 	-webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   filter: grayscale(0.5);
