@@ -415,7 +415,7 @@ section {
 
 .silversponsors img {
 	border: 5px solid #d5cdcd;
-	width: 190px;
+	width: 370px;
 	-webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   filter: grayscale(0.5);
@@ -459,6 +459,36 @@ section {
   -ms-filter: grayscale(0%);
   -o-filter: grayscale(0%);
 }
+
+.gaffers {
+	padding-bottom: 20px;
+}
+
+.gaffer {
+	display: inline-block;
+	margin: 0 auto;
+	margin-left: 16px;
+	margin-right: 16px;
+}
+
+.gaffer img {
+	border: 5px solid #d5cdcd;
+	width: 150px;
+	-webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: grayscale(0.5);
+  filter: gray; /* IE 6-9 */
+}
+
+.gaffer img:hover {
+	filter: none;
+	filter: grayscale(0);
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+}
+
 /* Section Content for Map */
 
 .map {
